@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "My-font";
+    src: url("./fontawesome-webfont.woff"),
+         url("./fontawesome-webfont.ttf");
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hello-world {
+    font-family: "My-font";
+    color: blue;
+
+    padding: 15px;
+    width: 300px;
+    height: 300px;
+    background-image: url("./mmgdg.jpg");
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: center center;
+
+    border: 1px dotted #aaa;
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px #ccc;
+}
+
+.hello-world::before {
+    content: "\f004";
+    font-size: 1.2em;
+    margin-right: 0.8em;
+    color: black;
+}
+
+.hello-world button {
+    margin-left: 1em;
+}
