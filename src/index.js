@@ -2,7 +2,7 @@
 
 import "./style.css";
 import _ from "lodash";
-import Icon from "./mmgdg.jpg";
+// import Icon from "./mmgdg.jpg";
 import Data from "./data.xml";
 import fnPrint from "./print.js";
 import { cube } from "./math.js";

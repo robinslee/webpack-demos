@@ -6,8 +6,10 @@ const uglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
     entry: {
-        app: "./src/index.js"
+        // app: "./src/index.js",
         // print: "./src/print.js"
+        // another: "./src/another-module.js",
+        dynamic: "./src/dynamic-import-module.js"
     },
     plugins: [
         new CleanWebpackPlugin(["dist/*.*"], {
@@ -18,11 +20,16 @@ module.exports = {
         }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new uglifyJSPlugin()
+        new uglifyJSPlugin(),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: "common" // common bundle's name
+        // })
     ],
     output: {
         filename: "[name].bundle.js",
-        path: path.resolve(__dirname, "dist")
+        chunkFilename: "[name].bundle.js",
+        path: path.resolve(__dirname, "dist"),
+        publicPath: "/"
     },
     devtool: "inline-source-map",
     // devServer: {
