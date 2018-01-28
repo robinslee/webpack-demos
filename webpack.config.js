@@ -6,10 +6,10 @@ const uglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
     entry: {
-        // app: "./src/index.js",
+        app: "./src/index.js",
         // print: "./src/print.js"
         // another: "./src/another-module.js",
-        dynamic: "./src/dynamic-import-module.js"
+        // dynamic: "./src/dynamic-import-module.js"
     },
     plugins: [
         new CleanWebpackPlugin(["dist/*.*"], {
@@ -18,6 +18,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "Webpack Demos, Get Start"
         }),
+        new webpack.HashedModuleIdsPlugin(),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new uglifyJSPlugin(),

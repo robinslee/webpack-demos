@@ -16,7 +16,7 @@ function component() {
     container.classList.add("hello-world");
 
     button.innerHTML = "Click me";
-    button.onclick = fnPrint;
+    button.onclick = fnPrint.bind(null, "Hello Hello Hello!");
     
     container.appendChild(button);
 
